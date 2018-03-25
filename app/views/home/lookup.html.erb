@@ -6,4 +6,35 @@
 <%= submit_tag 'lookup currency' %>
 <% end %>
 <br/><br/>$
+
 <%= @symbol %>
+
+    <% if @symbol %>
+
+                                                                
+
+
+        <% for x in @lookup_coin %>
+        
+        <% if @symbol == x["symbol"] %>
+    
+        <b><%= x["name"] %>: $<%= x["price_usd"] %></b> <br>
+    
+        Rank:<b><%= x["rank"]%></b> <br/><br/><br><br><br>
+
+           <% end %>
+   
+ <% end %>
+    
+  <% end %>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
